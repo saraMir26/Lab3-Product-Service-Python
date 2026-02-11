@@ -1,5 +1,3 @@
-# NOTE: This code was generated with the assistance of AI (ChatGPT) for learning purposes.
-
 from flask import Flask, jsonify
 from flask_cors import CORS
 import os
@@ -8,6 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+
+# ENABLE CORS
 CORS(app)
 
 port = int(os.environ.get("PORT", 3030))
