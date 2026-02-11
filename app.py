@@ -1,14 +1,11 @@
-print(">>>> STARTING PRODUCT SERVICE <<<<")
-
 from flask import Flask, jsonify
 from flask_cors import CORS
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
+print("STARTING PRODUCT SERVICE")
+
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # allow all for now
 
 @app.route("/")
 def home():
@@ -16,7 +13,11 @@ def home():
 
 @app.route("/products", methods=["GET"])
 def get_products():
-    return jsonify([...])
+    return jsonify([
+        { "id": 1, "name": "Dog Food", "price": 19.99 },
+        { "id": 2, "name": "Cat Food", "price": 34.99 },
+        { "id": 3, "name": "Bird Seeds", "price": 10.99 },
+    ])
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
