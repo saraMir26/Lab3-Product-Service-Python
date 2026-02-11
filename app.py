@@ -7,8 +7,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# ENABLE CORS
-CORS(app)
+# Allow CORS from your static web app only
+CORS(app, origins=["https://ashy-dune-0ea95370f.2.azurestaticapps.net"])
 
 port = int(os.environ.get("PORT", 3030))
 
