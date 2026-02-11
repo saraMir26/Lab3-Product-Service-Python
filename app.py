@@ -1,6 +1,9 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 
+print("STARTING PRODUCT SERVICE")
+
+
 app = Flask(__name__)
 CORS(app)  # allow all for now
 
