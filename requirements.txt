@@ -1,4 +1,4 @@
-Flask
-flask-cors
-gunicorn
-python-dotenv
+Flask==3.0.0
+Flask-Cors==4.0.0
+python-dotenv==1.0.0
+gunicorn==25.0.3
